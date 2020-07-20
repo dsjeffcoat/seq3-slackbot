@@ -7,3 +7,13 @@ app = Flask(__name__)
 def hello():
     name = request.args.get("name", "World")
     return f'Hello, {escape(name)}!'
+
+@app.route('/goodbye')
+def goodbye():
+    name = request.args.get("name", "My Friend")
+    return f'Goodbye, {escape(name)}!'
+
+@app.route('/sunshine')
+def sunshine():
+    name = request.args.get("name", "My Friend")
+    return f'It is Always Sunny, {escape(name)}!'
